@@ -3814,6 +3814,5 @@ async function guardarEditarFactura() {
     await PUT('/ventas/' + _editFacturaId + '/editar', { fecha, cliente_id, forma_pago, items: _editItems });
     cerrarEditarFactura();
     renderSales();
-    showToast('✅ Factura actualizada correctamente', 'success');
   } catch(e) { alert('Error: ' + e.message); }
 }
